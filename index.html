@@ -4,122 +4,75 @@
   <meta charset="UTF-8" />
   <title>Exigências Cartorárias – Registro de Imóveis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
-      background: #f9f9f9;
-      color: #333;
-      padding: 1rem;
-    }
-    header {
-      background: #004aad;
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    header h1 {
-      font-size: 1.5rem;
-    }
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .controls input,
-    .controls select {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 0.3rem;
-      flex: 1;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 0.5rem;
-      overflow: hidden;
-    }
-    thead {
-      background: #eaeaea;
-    }
-    th,
-    td {
-      padding: 0.75rem;
-      text-align: left;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    tr:hover {
-      background: #f1f7ff;
-    }
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    @media (max-width: 600px) {
-      th:nth-child(4),
-      td:nth-child(4) {
-        display: none;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
   <header>
     <h1>Exigências Cartorárias – Registro de Imóveis</h1>
   </header>
-
-  <section class="controls">
-    <input type="text" id="search" placeholder="Buscar exigência..." aria-label="Buscar exigência" />
-
-    <select id="stateFilter" aria-label="Filtrar por UF">
-      <option value="">Todas as UFs</option>
-      <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
-      <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
-      <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
-      <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
-      <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
-      <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
-      <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
-      <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
-      <option value="SE">SE</option><option value="SP">SP</option><option value="TO">TO</option>
-    </select>
-
-    <select id="cityFilter" aria-label="Filtrar por cidade ou comarca">
-      <option value="">Todas as cidades</option>
-      <!-- Este campo será populado dinamicamente -->
-    </select>
-  </section>
-
-  <table id="exigTable">
-    <thead>
-      <tr>
-        <th>UF</th>
-        <th>Cidade</th>
-        <th>Exigência</th>
-        <th>Última atualização</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>SP</td>
-        <td>São Paulo</td>
-        <td>Cópia autenticada da escritura de compra e venda</td>
-        <td>2025-06-10</td>
-      </tr>
-      <tr>
-        <td>SP</td>
-        <td>Campinas</td>
-        <td>Certidão de matrícula atualizada emitida nos últimos 30 dias</td>
-        <td>2025-07-01</td>
-      </tr>
-    </tbody>
-  </table>
+  <main>
+    <section class="controls">
+      <input type="text" id="search" placeholder="Buscar exigência..." aria-label="Buscar exigência" />
+      <select id="stateFilter" aria-label="Filtrar por UF">
+        <option value="">Todas as UFs</option>
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AP">AP</option>
+        <option value="AM">AM</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="DF">DF</option>
+        <option value="ES">ES</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MT">MT</option>
+        <option value="MS">MS</option>
+        <option value="MG">MG</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PR">PR</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RS">RS</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="SC">SC</option>
+        <option value="SE">SE</option>
+        <option value="SP">SP</option>
+        <option value="TO">TO</option>
+      </select>
+      <select id="cityFilter" aria-label="Filtrar por cidade ou comarca">
+        <option value="">Todas as cidades</option>
+        <!-- Este campo será populado dinamicamente -->
+      </select>
+    </section>
+    <table id="exigTable">
+      <thead>
+        <tr>
+          <th>UF</th>
+          <th>Cidade</th>
+          <th>Exigência</th>
+          <th>Última atualização</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SP</td>
+          <td>São Paulo</td>
+          <td>Cópia autenticada da escritura de compra e venda</td>
+          <td>2025-06-10</td>
+        </tr>
+        <tr>
+          <td>SP</td>
+          <td>Campinas</td>
+          <td>Certidão de matrícula atualizada emitida nos últimos 30 dias</td>
+          <td>2025-07-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 
   <footer>
     <p>
