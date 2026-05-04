@@ -22,6 +22,7 @@ header {
     color: #fff;
     padding: 1em 2em;
     margin-bottom: 1.5em;
+    text-align: center;
 }
 
 header h1 {
@@ -67,6 +68,10 @@ th, td {
 
 tr:hover {
     background: #f1f7ff;
+}
+
+main > table > tbody > tr > td > ul > li > a {
+    text-decoration: nome;
 }
 
 footer {
