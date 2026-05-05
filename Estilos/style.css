@@ -78,7 +78,7 @@ footer {
     color: #000000;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     th:nth-child(4), td:nth-child(4) {
     display: none;
     }
