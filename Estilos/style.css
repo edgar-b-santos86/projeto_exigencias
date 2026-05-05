@@ -70,10 +70,6 @@ tr:hover {
     background: #f1f7ff;
 }
 
-main > table > tbody > tr > td > ul > li > a {
-    text-decoration: nome;
-}
-
 footer {
     margin-top: 2em;
     text-align: center;
