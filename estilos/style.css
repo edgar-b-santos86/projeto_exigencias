@@ -86,6 +86,14 @@ tr {
     transition: background 0.15s ease;
 }
 
+tr[data-scope="national"] {
+  background: #fff3cd;
+}
+
+tr[data-scope="state"] {
+  background: #e6f4ff;
+}
+
 tr:hover {
     background: #f1f7ff;
 }
