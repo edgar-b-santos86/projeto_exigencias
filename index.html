@@ -5,6 +5,7 @@
   <title>Exigências Cartorárias – Registro de Imóveis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="estilos/style.css">
+  <link rel="icon" href="imagens/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -47,14 +48,18 @@
         <option value="">Todas as cidades</option>
         <!-- Este campo será populado dinamicamente -->
       </select>
+      <button id="clearFilters" type="button">Limpar filtros</button>
     </section>
+    <strong>
+      <p id="resultCount" style="margin-bottom:1em; font-size:0.9em;" aria-live="polite"></p>
+    </strong>
     <table id="exigTable">
       <thead>
         <tr>
-          <th>UF</th>
-          <th>Cidade</th>
-          <th>Exigência</th>
-          <th>Última atualização</th>
+          <th scope="col">UF</th>
+          <th scope="col">Cidade</th>
+          <th scope="col">Exigência</th>
+          <th scope="col">Última atualização</th>
         </tr>
       </thead>
       <tbody>
@@ -564,6 +569,36 @@
           <td>04/05/2026</td>
         </tr>
         <tr>
+          <td>MG</td>
+          <td>Poços de Caldas</td>
+          <td>
+          <ul>
+            <em>Comarca exige que seja mencionada a qualificação completa dos procuradores da Administradora:</em>
+            <li><strong>NOME COMPLETO</strong>, brasileiro, maior, capaz, (estado civil), (sob o regime da xxxxxx de bens), (profissão), portador da cédula de identidade RG n° XXXXXXXXX, inscrito no CPF/MF sob o n° XXXXXXXX, filho de (filiação), e que apresenta o endereço eletrônico: xxxxxx  residente e domiciliado à Rua XXXXXXX E <strong>NOME COMPLETO</strong>, brasileiro, maior, capaz, (estado civil), (sob o regime da xxxxxx de bens), (profissão), portador da cédula de identidade RG n° XXXXXXXXX, inscrito no CPF/MF sob o n° XXXXXXXX, filho de (filiação), e que apresenta o endereço eletrônico: xxxxxx  residente e domiciliado à Rua XXXXXXX.</li>
+            <li><strong>Cláusula para mencionar no contrato:</strong> Para constar que o vendedor declara sob as penas da Lei, que inexistem Débitos Condominiais referente ao imóvel objeto da transação, inclusive multas até a presente data, em conformidade com o disposto no parágrafo único do Artigo 4º da Lei nº. 4.591, de 16.12.1964, alterado pela Lei nº. 7.182, de 27.03.1984. (Somente quando o imóvel estiver localizado em condomínio).</li>
+            <li><strong>Cláusula para mencionar no contrato:</strong> Para constar que foi apresentada a Certidão Negativa de Tributos Municipais, do imóvel sob Inscrição Municipal nº XXXXXX, emitida em XXXXX pela Prefeitura Municipal de XXXX, Estado do XXXXXX, de acordo com o artigo 1º no Parágrafo 2º do Decreto 93.240/1986.</li>
+            <li><strong>Cláusula para mencionar no contrato:</strong> Foram apresentadas pelo(s) VENDEDOR(ES) e encontram-se arquivadas na sede do CREDOR as Certidões (Negativas ou Positivas) do Ofício do Registro de Distribuição dos feitos ajuizados de Execuções Cíveis na Comarca de Poço de Caldas/MG, Certidões (Negativas ou Positivas) da Justiça Federal - Seção Judiciária do Estado de Minas Gerais que abrange a Comarca de Poço de Caldas/MG, Certidões (Negativas ou Positivas) da Justiça do Trabalho da 3ª Região. (Necessário mencionar todas as certidões, sendo 1ª Instância, 2ª Instância TRF). Observação: Essa comarca exige que seja apresentada e mencionada no contrato as certidões dos vendedores. Quando for um processo que não tem vendedor (IQ próprio e construção por exemplo), deverá ser solicitada as certidões em nome dos COMPRADORES/DEVEDORES.</li>
+            <li><strong>Cláusula para mencionar no contrato:</strong> Para constar que o ITBI será apresentado no ato do registro, conforme autoriza o Artigo 9º, Inciso II da Lei 5.492/88. (Quando for um processo de construção ou IQ próprio, não precisa mencionar essa cláusula)</li>
+            <li><strong>Cláusula para mencionar no contrato:</strong> Para constar que as partes declaram, nos termos do §5º do art. 187 do Provimento Conjunto nº 93/2020, que foram advertidas e têm ciência sobre a possibilidade de obtenção das certidões dos distribuidores judiciais para maior segurança do negócio jurídico.</li>
+            <li>Essa comarca exige que qualquer ônus (que não seja hipoteca, alienação) seja baixado na matrícula, mesmo a vigência da eficácia tenha acabado. Diante disso, necessário sempre entrar em contato com o Cartório para esclarecer, sendo que não realizam concomitante ao registro do nosso contrato.</li>
+          </ul>
+          <td>04/05/2026</td>
+        </tr>
+        <tr>
+          <td>MG</td>
+          <td>Sete Lagoas</td>
+          <td>
+            <ul>
+              <strong>Operações de construção:</strong>
+              <p>"No Município de Sete Lagoas/MG, para processos de construção com até 02 pavimentos, a parte interessada deve apresentar um Projeto de Implantação de Edificação e a Aprovação desse Projeto é concedida mediante uma Declaração de Responsabilidade assumida pelo profissional responsável pelo projeto.</p>
+              <p> O  Projeto Arquitetônico deverá ser apresentado somente no momento de solicitação do Habite-se e será utilizado somente para fins de conferência, ou seja, não será objeto de análise por parte do Município, já que a responsabilidade é única e exclusiva do autor do projeto.</p>
+              <p>Portanto, em construções de até 02 pavimentos no Município de Sete Lagoas/MG, caso conste no Projeto de Implantação a Declaração de Responsabilidade assinada pelo engenheiro/arquiteto responsável, não será necessário solicitar o carimbo e assinatura da Prefeitura no Projeto Arquitetônico, visto que essa declaração assinada já é a aprovação do Projeto,conforme artigos 11 a 15 do Decreto nº 6.186/2019 do Município de Sete Lagoas/MG.</p>
+              <p>Diante disso, nas análises jurídicas precisamos nos atentar quanto ao número de pavimentos da construção, se consta a assinatura do engenheiro responsável na Declaração de Responsabilidade e se foi apresentado o Projeto de Implantação completo."</p>
+            </ul>
+          </td>
+          <td>04/05/2026</td>
+        </tr>        
+        <tr>
           <td>GO</td>
           <td>Anápolis</td>
           <td>Comarca exige que a matrícula não esteja vencida no momento da emissão do contrato. Não é exigência mencionar nos em tempos, porém eles consultam no Cartório quando foi a última emissão.</td>
@@ -589,6 +624,7 @@
         </tr>
       </tbody>
     </table>
+    <p id="noResults" style="display:none; text-align:center; padding:1em;" aria-live="polite"><strong>Nenhuma exigência encontrada.</strong></p>
   </main>
 
   <footer>
@@ -605,10 +641,17 @@
     const cityFilter = document.getElementById("cityFilter");
     const rows = document.querySelectorAll("#exigTable tbody tr");
 
+    function highlight(text, query) {
+      if (!query) return text;
+      const regex = new RegExp(`(${query})`, "gi");
+      return text.replace(regex, "<mark>$1</mark>");
+}
+
     function filter() {
       const query = searchInput.value.toLowerCase();
       const state = stateFilter.value;
       const city = cityFilter.value.toLowerCase();
+      let visibleCount = 0;
 
       rows.forEach((row) => {
         const cells = row.querySelectorAll("td");
@@ -619,9 +662,14 @@
         const matchesQuery = text.includes(query);
         const matchesState = state === "" || rowState === state;
         const matchesCity = city === "" || rowCity === city;
+        const matches = matchesQuery && matchesState && matchesCity;
 
-        row.style.display = matchesQuery && matchesState && matchesCity ? "" : "none";
-      });
+        row.style.display = matches ? "" : "none";
+        if (matches) visibleCount++;
+    });
+
+      document.getElementById("noResults").style.display = visibleCount === 0 ? "block" : "none";
+      document.getElementById("resultCount").textContent = `${visibleCount} exigência(s) encontrada(s)`;
     }
 
     function populateCities() {
@@ -656,6 +704,51 @@
     window.addEventListener("DOMContentLoaded", () => {
       populateCities();
     });
+
+    document.getElementById("clearFilters").addEventListener("click", () => {
+      searchInput.value = "";
+      stateFilter.value = "";
+      cityFilter.value = "";
+      populateCities();
+      filter();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const backgrounds = [
+    "imagens/casas1.jpg",
+    "imagens/casas2.jpg",
+    "imagens/casas3.jpg",
+    "imagens/casas4.jpg",
+    "imagens/casas5.jpg",
+    "imagens/casas6.jpg",
+    "imagens/casas7.jpg",
+    "imagens/casas8.jpg",
+    "imagens/casas9.jpg",
+    "imagens/casas10.jpg",
+    "imagens/casas11.jpg",
+    "imagens/casas12.jpg",
+    "imagens/casas13.jpg",
+    "imagens/casas14.jpg",
+    "imagens/casas15.jpg",
+    "imagens/casas16.jpg",
+    "imagens/casas17.jpg",
+    "imagens/casas18.jpg",
+    "imagens/casas19.jpg",
+    "imagens/casas20.jpg"
+  ];
+
+  let escolhida;
+  const ultima = sessionStorage.getItem("ultimoFundo");
+  do {
+    escolhida = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+  } while (escolhida === ultima && backgrounds.length > 1);
+
+  sessionStorage.setItem("ultimoFundo", escolhida);
+  document.body.style.backgroundImage = `url(${escolhida})`;
+
+  populateCities();
+  filter();
+});
   </script>
 </body>
 </html>
