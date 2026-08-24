@@ -1788,10 +1788,6 @@ city === "" || rowCity === city;
     });
     cityFilter.addEventListener("change", filter);
 
-    window.addEventListener("DOMContentLoaded", () => {
-      populateCities();
-    });
-
     document.getElementById("clearFilters").addEventListener("click", () => {
       searchInput.value = "";
       stateFilter.value = "";
