@@ -127,3 +127,19 @@ footer {
     color: #2e5485;
   }
 }
+
+#clausesTable td:first-child {
+  width: 25%;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+#clausesTable td:last-child {
+  width: 75%;
+}
+
+#clausesSection h2 {
+  color: #2e5485;
+  border-bottom: 2px solid #2e5485;
+  padding-bottom: 0.3em;
+}
