@@ -1583,7 +1583,7 @@
     <section id="clausesSection" style="margin-top: 2.5em;">
       <h2 style="margin-bottom: 0.75em;">Modelos de Cláusulas Avulsas</h2>
       <p style="margin-bottom: 1em; font-size: 0.9em; color: #333;">
-        Cláusulas de uso geral, aplicáveis a qualquer comarca ou cidade.
+        <strong>Cláusulas de uso geral, aplicáveis a qualquer comarca ou cidade.</strong>
       </p>
       <input
         type="text"
@@ -1753,26 +1753,32 @@ city === "" || rowCity === city;
 
     clauseSearch.addEventListener("input", filterClauses);
 
-    function addCopyButtons() {
-      clauseRows.forEach((row) => {
-        const clauseCell = row.querySelectorAll("td")[1];
+    function addCopyButtons(rowsList, columnIndex) {
+      rowsList.forEach((row) => {
+        const cell = row.querySelectorAll("td")[columnIndex];
+        if (!cell) return;
+
+        const originalText = cell.textContent.trim();
+
         const btn = document.createElement("button");
         btn.textContent = "Copiar";
         btn.style.cssText = "margin-top:0.5em; padding:0.3em 0.8em; font-size:0.8em; cursor:pointer;";
         btn.addEventListener("click", () => {
-          navigator.clipboard.writeText(clauseCell.textContent.trim());
+          navigator.clipboard.writeText(originalText);
           btn.textContent = "Copiado!";
           setTimeout(() => (btn.textContent = "Copiar"), 1500);
         });
-        clauseCell.appendChild(document.createElement("br"));
-        clauseCell.appendChild(btn);
+
+        cell.appendChild(document.createElement("br"));
+        cell.appendChild(btn);
       });
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
+     window.addEventListener("DOMContentLoaded", () => {
       populateCities();
       filter();
-      addCopyButtons();
+      addCopyButtons(rows, 2);
+      addCopyButtons(clauseRows, 1); 
     });
 
     searchInput.addEventListener("input", filter);
