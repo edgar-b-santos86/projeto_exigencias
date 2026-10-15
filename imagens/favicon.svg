@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Exigências cartorárias">
+  <rect width="64" height="64" rx="14" fill="#12263f"/>
+  <path d="M20 12h17l9 9v31H20z" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M37 12v9h9" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M26 31h14M26 38h14" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="44" cy="46" r="8" fill="#c88a0a" stroke="#12263f" stroke-width="3"/>
+</svg>
